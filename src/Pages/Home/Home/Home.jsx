@@ -1,11 +1,14 @@
 import React from 'react';
+import Bennar from '../Bennar/Bennar';
+import { About, Experience } from '../../../components';
 
 const Home = () => {
     return (
         <div>
-            {/* <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-                <Hero />
-            </div> */}
+            <Bennar></Bennar>
+            <Experience></Experience>
+            <About></About>
+
         </div>
     );
 };
