@@ -1,0 +1,9 @@
+.navbar-bg{
+    background: rgba(26,21,40,.2);
+    backdrop-filter: blur(25px);
+    position: fixed;
+    z-index: 10;
+    -webkit-backdrop-filter: blur(25px);
+    top: 0;
+    width: 100%;
+}

@@ -7,18 +7,24 @@ import { motion } from "framer-motion";
 
 import "react-vertical-timeline-component/style.min.css";
 
-import { styles } from "../styles";
-import { experiences } from "../constants";
-import { SectionWrapper } from "../hoc";
-import { textVariant } from "../utils/motion";
+import { styles } from "../../styles";
+import { experiences } from "../../constants";
+import { SectionWrapper } from "../../hoc";
+import { textVariant } from "../../utils/motion";
+import './Experience.css'
 
 const ExperienceCard = ({ experience }) => {
   return (
     <VerticalTimelineElement
       contentStyle={{
-        background: "#1d1836",
+        background: "rgba(26,21,40,.2)",
         color: "#fff",
+        borderRadius:"30px",
+        backdropFilter:"blur(25px)",
+        // webkit
+        // backdropFilter:" ";
       }}
+      // className="bg-experience"
       contentArrowStyle={{ borderRight: "7px solid  #232631" }}
       date={experience.date}
       iconStyle={{ background: experience.iconBg }}
@@ -35,7 +41,7 @@ const ExperienceCard = ({ experience }) => {
       <div>
         <h3 className='text-white text-[24px] font-bold'>{experience.title}</h3>
         <p
-          className='text-secondary text-[16px] font-semibold'
+          className='text-white text-[16px] font-semibold'
           style={{ margin: 0 }}
         >
           {experience.company_name}
@@ -46,7 +52,7 @@ const ExperienceCard = ({ experience }) => {
         {experience.points.map((point, index) => (
           <li
             key={`experience-point-${index}`}
-            className='text-white-100 text-[14px] pl-1 tracking-wider'
+            className='text-white text-[14px] pl-1 tracking-wider'
           >
             {point}
           </li>
@@ -59,7 +65,7 @@ const ExperienceCard = ({ experience }) => {
 const Experience = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div variants={textVariant()} className="">
         <h2 className={`${styles.sectionHeadText} text-center`}>
           Our Services
         </h2>

@@ -42,8 +42,8 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
-    icon: web,
+    title: "Editor",
+    icon: 'https://i.ibb.co/5LP78bT/Picsart-23-04-30-12-19-53-717.jpg',
   },
   {
     title: "React Native Developer",
@@ -52,6 +52,14 @@ const services = [
   {
     title: "Backend Developer",
     icon: backend,
+  },
+  {
+    title: "Content Creator",
+    icon: creator,
+  },
+  {
+    title: "Content Creator",
+    icon: creator,
   },
   {
     title: "Content Creator",

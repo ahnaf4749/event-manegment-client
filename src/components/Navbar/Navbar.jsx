@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import { styles } from "../styles";
-import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
+import { styles } from "../../styles";
+import { navLinks } from "../../constants";
+import { logo, menu, close } from "../../assets";
+import './Navbar.css'
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -28,8 +29,8 @@ const Navbar = () => {
   return (
     <nav
       className={`${styles.paddingX
-        } w-full flex items-center py-5 fixed top-0 z-20 ${scrolled ? "bg-primary" : "bg-transparent"
-        }`}
+        } w-full flex items-center py-5 fixed top-0 z-20 ${scrolled ? "bg-[#C1C9E2]" : "bg-transparent"
+        } navbar-bg`}
     >
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
         <Link
@@ -40,7 +41,7 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
+          <img src='https://i.ibb.co/bsjgHWD/20230802-005850.png' alt='logo' className='w-20 h-20 object-contain' />
           <p className='text-white text-[18px] font-bold cursor-pointer flex '>
             Citrayon &nbsp;
             <span className='sm:block hidden'> | Photograpy & Videograpy</span>

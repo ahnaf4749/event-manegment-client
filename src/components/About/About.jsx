@@ -1,11 +1,13 @@
 import React from "react";
 import Tilt from "react-tilt";
 import { motion } from "framer-motion";
-
-import { styles } from "../styles";
-import { services } from "../constants";
-import { SectionWrapper } from "../hoc";
-import { fadeIn, textVariant } from "../utils/motion";
+import { BsFacebook } from "react-icons/bs";
+import { styles } from "../../styles";
+import { services } from "../../constants";
+import { SectionWrapper } from "../../hoc";
+import { fadeIn, textVariant } from "../../utils/motion";
+import './About.css'
+import { Link } from "react-router-dom";
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className='xs:w-[250px] w-full'>
@@ -19,19 +21,19 @@ const ServiceCard = ({ index, title, icon }) => (
           scale: 1,
           speed: 450,
         }}
-        className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
+        className='about-bg rounded-[20px]  min-h-[280px] flex justify-evenly items-center flex-col'
       >
         <img
           src={icon}
           alt='web-development'
-          className='w-16 h-16 object-contain'
+          className='w-full h-full object-contain rounded-[20px]'
         />
-
-        <h3 className='text-white text-[20px] font-bold text-center'>
+      </div>
+      
+    </motion.div>
+    <h3 className='text-white text-[20px] font-bold text-center'>
           {title}
         </h3>
-      </div>
-    </motion.div>
   </Tilt>
 );
 
@@ -58,27 +60,26 @@ const About = () => {
         <Tilt className='xs:w-[250px] w-full'>
           <motion.div
             // variants={fadeIn("right", "spring", index * 0.5, 0.75)}
-            className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
+            className='w-full green-pink-gradient  rounded-[20px] shadow-card'
           >
-            <div
-              options={{
-                max: 45,
-                scale: 1,
-                speed: 450,
-              }}
-              className='bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col'
+                <div className="my-6 teams">
+          <div className="avatar relative inline-block">
+            <Link
+              to="https://www.linkedin.com/in/sumonkaysar/"
+              className="social-media absolute bg-white bottom-0 right-0 z-10 "
             >
-              <img
-                // src={icon}
-                alt='web-development'
-                className='w-16 h-16 object-contain'
-              />
-
-              <h3 className='text-white text-[20px] font-bold text-center'>
-                {/* {title} */}
-              </h3>
+              <BsFacebook className="inline-block text-xl h-8 w-6" />
+            </Link>
+            <div className="team rounded-full relative">
+              <img className="w-full h-full object-contain rounded-[20px]" src='https://i.ibb.co/5LP78bT/Picsart-23-04-30-12-19-53-717.jpg' alt="" />
             </div>
+          </div>
+        </div>
+ 
           </motion.div>
+          <h3 className='text-white text-[20px] font-bold text-center'>
+                (CEO) Farazz
+              </h3>
         </Tilt>
       </div>
 

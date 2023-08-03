@@ -1,0 +1,5 @@
+.bg-experience{
+  background: rgba(26,21,40,.2);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+}
